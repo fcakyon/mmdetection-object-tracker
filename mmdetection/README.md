@@ -7,7 +7,7 @@ Simplest possible example of tracking. Based on [MMDetection Detector](https://g
 1. Install Norfair with `pip install norfair[video]`.
 2. Install MMDetection with `pip install torch mmcv-full mmdet`.
 3. Run `python demo.py <video file>`.
-4. Bonus: Use additional arguments `--detector_path`, `--img_sscale`, `--conf_thres`, `--max_track_distance`, `--track_points` as you wish.
+4. Bonus: Use additional arguments `--model_path`, `--config_path`,`--img_scale`, `--conf_thres`, `--max_track_distance`, `--track_points` as you wish.
 
 ## Explanation
 
