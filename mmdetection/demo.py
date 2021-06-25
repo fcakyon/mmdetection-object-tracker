@@ -8,8 +8,6 @@ import norfair
 from norfair import Detection, Tracker, Video
 from mmdet.apis import init_detector, inference_detector
 
-import mmdet_utils
-
 
 class Detector:
     def __init__(self, model_path: str, config_path: str, device: Optional[str] = None, track_points: str = "bbox"):
@@ -27,18 +25,11 @@ class Detector:
         self.model = self.load_model()
 
     def load_model(self):
-        if not self.model_path:
-            self.model_path, self.config_path = mmdet_utils.MmdetPretrainedModel(model_name="retinanet").download()
-        else:
-            assert Path(self.model_path).is_file(), TypeError(f"{self.model_path} should be a checkpoint file.")
-            assert Path(self.config_path).is_file(), TypeError(f"{self.config_path} should be a config file.")
+        assert Path(self.model_path).is_file(), TypeError(f"{self.model_path} should be a checkpoint file.")
+        assert Path(self.config_path).is_file(), TypeError(f"{self.config_path} should be a config file.")
 
-        # try to download model from url if checkpoint file not present
         if not Path(self.model_path).exists():
-            try:
-                self.model_path, self.config_path = mmdet_utils.MmdetPretrainedModel(self.model_path).download()
-            except:
-                FileNotFoundError(f"{self.model_path} is not present.")
+            FileNotFoundError(f"{self.model_path} is not present.")
 
         model = init_detector(config=self.config_path, checkpoint=self.model_path, device=self.device)
         return model
