@@ -7,6 +7,10 @@
   Simplest possible example of tracking. Based on <a href="https://github.com/open-mmlab/mmdetection" target="_blank">MMDetection Detector</a>.
 </h4>
 
+<a href="https://colab.research.google.com/github/fcakyon/mmdetection-object-tracker/blob/master/demo.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+<img src="https://github.com/fcakyon/public-files/raw/main/mmdetection-object-tracker/vfnet-demo.gif" width="800" >
+
 </div>
 
 ## <div align="center">Instructions</div>
@@ -19,3 +23,9 @@
 ## <div align="center">Explanation</div>
 
 This example tracks objects using a single or double point per detection: the centroid or the two corners of the bounding boxes around objects returned by MMDetection Detector.
+
+### VFNet (MMDetection) tracking demo:
+
+<div align="center">
+<img src="https://github.com/fcakyon/public-files/raw/main/mmdetection-object-tracker/vfnet-demo.gif" width="800" >
+</div>
