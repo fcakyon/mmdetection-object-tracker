@@ -83,9 +83,9 @@ parser.add_argument(
     "--model_path",
     type=str,
     default="",
-    help="Detector checkpoint path",
+    help="MMDetection model checkpoint path",
 )
-parser.add_argument("--config_path", type=str, default="", help="Detector config path")
+parser.add_argument("--config_path", type=str, default="", help="MMDetection model config path")
 parser.add_argument("--device", type=str, default=None, help="Inference device: 'cpu' or 'cuda'")
 parser.add_argument("--max_track_distance", type=int, default="30", help="Maximum tracker point distance")
 parser.add_argument("--track_points", type=str, default="bbox", help="Track points: 'centroid' or 'bbox'")
